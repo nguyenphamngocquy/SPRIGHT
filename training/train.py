@@ -816,7 +816,7 @@ def main():
         args.device = "hpu"
         logger.info("Using HPU")
     elif torch.cuda.is_available():
-        logger.info.device = "cuda"
+        logger.info(f"Using device: {args.device}")
         print("Using GPU")
     else:
         args.device = "cpu"
