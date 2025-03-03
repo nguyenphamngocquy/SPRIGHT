@@ -34,7 +34,6 @@ import torch.utils.checkpoint
 import transformers
 from accelerate import Accelerator
 
-
 try:
     from optimum.habana import GaudiConfig
     from optimum.habana.accelerate import GaudiAccelerator
@@ -105,6 +104,7 @@ debug = False
 # Will error if the minimal version of diffusers is not installed. Remove at your own risks.
 #check_min_version("0.23.0.dev0")
 
+accelerator = Accelerator()
 logger = get_logger(__name__, log_level="INFO")
 
 
